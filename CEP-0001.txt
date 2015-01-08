@@ -22,7 +22,7 @@ make use of a configuration management solution to ensure that those
 dependencies are available to the application.
 
 Docker [2]_ is one such option available, and has been growing in popularity
-of late.  I propose a proof of concept Docker setup on CIDA infrastruction
+of late.  I propose a proof of concept Docker setup on CIDA infrastructure
 in order to determine whether it should be considered for general
 applicability across many applications as a containerization and
 configuration management mechanism.
@@ -45,7 +45,7 @@ to show the benefits and challenges of Docker or similar systems.
 
 The following features of Docker are particularly of interest at this point:
 
-- Running multiple sandboxed containers within a single Virtual Machine
+- Running multiple sandbox-ed containers within a single Virtual Machine
 
 - Having an artifact that represents all dependencies of a service
 
@@ -72,11 +72,11 @@ Containers [6]_ an appealing alternative.  Docker fits into the latter group
 and offers lower overhead when compared to virtual machines.
 
 When using containers to avoid dependencies conflicts in system dependencies,
-system level containers are required.  Alternate approaches to sandboxed
+system level containers are required.  Alternate approaches to sandbox-ed
 environments are worth discussing for the benefit they bring, but none solve
 the system dependency problem.  The Java classloader allows for different
 services to use different versions of libraries, python virtualenv [7]_
-installs isloated python environments to achieve the same end, and packrat [8]_
+installs isolated python environments to achieve the same end, and packrat [8]_
 is an R package that offers similar functionality.
 
 Configuration Management
@@ -144,7 +144,7 @@ Conclusion
 
 A proof of concept Docker setup will give valuable insight into how this tool
 might fit into CIDA's infrastructure.  Benefits such as lower overhead and
-improved consistancy of services promise to improve our ability to deliver
+improved consistency of services promise to improve our ability to deliver
 quality software.  Lessons learned from this initial exploration will inform
 us as we look to future work in developing microservices.
 
