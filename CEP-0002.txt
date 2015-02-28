@@ -1,5 +1,5 @@
 CEP: 0002
-Title: A Expanded Developer Role
+Title: On a Cross-functional Data Science Team
 Version: $Revision$
 Last-Modified: $Date$
 Author: Jordan Walker <jiwalker@usgs.gov>
@@ -13,34 +13,123 @@ Post-History:
 Abstract
 ========
 
+In the interest of maintaining a sustainable structure within CIDA, the 
+divisions between groups based on function should be broken down.  Teams
+that are composed of members from different functional units will enhance
+communication and collaboration between those units.  There has been a
+history of walls between these units which prevent such beneficial commun-
+ication.
+
+I propose adding a member of the developer team to the newly formed data
+science team for several reasons.  First, this position will act to prevent
+a wall forming between this group and others which will negatively impact
+CIDA overall.  Secondly, such a position will benefit the data science team
+as someone with a computer science background can lend that expertise to
+the overall goal of the team.  Lastly, such a position may blaze a path for
+career advancement within the computer scientist position that will help
+with recruitment.
 
 Rationale
 =========
 
+The goal of the teams at CIDA should not be to collect a group of people
+with the same background, but rather they should collect a group of people
+with a similar approach to solving the problems that are presented to CIDA.
+The existing data science team is utilizing some of CIDAs best-practes
+combinded with novel scientific research to establish a new approach to the
+challenges CIDA is attempting to counter.  With this approach, this team
+distinguishes itself from the rest of CIDA, but will best accomplish its
+goals with a cross-functional team.
+
+One of the directives of the data science team is to publish research that
+shows off the work of CIDA, the OWI, and the USGS.  Much of this work will
+be done by feeding off APIs produced by developers within all three of the
+aforementioned groups.  Having a developer who has been a part of these
+projects and can help to understand and enhance the underlying frameworks
+will benefit the team as a whole.  Adding to architectural decisions and
+integration with other CIDA projects is another benefit of having a developer
+on the team will have.
+
+The goal of cross-functional teams is prevalent within CIDA, but defining
+that goal is somewhat difficult.  One definition that seems to be making
+its rounds is that everyone on a team is able to take on any task that is
+presented to the team.  While this is a goal that has its merits, a
+definition that fits better is a group of people with different functional
+expertise working toward a common goal [_1].  By being a cross-functional
+team, the data science team will integrate better with CIDA and be more
+able to accomplish its goals.
+
+A growing issue within the development group is recruitment.  Qualified
+persons are difficult to find, and harder to hire.  One point that might
+aid in recruitment would be for different career paths that one could
+take.  The RGE and EDGE [_2] programs allow for advancement based on
+accomplishments in research and development.  Currently this is an untested
+approach for computer scientists, especially for CIDA.  Having this option
+available would help especially if looking for candidates with a more
+academic background (e.g. Computer Science or Electrical Engineering Graduate
+Students).  Currently this path would most likely be set through efforts
+taken on by the data science team.
 
 Duties
 ======
 
+As a member of the data science team, the developer role would include:
 
-Future Possibilities
-====================
+- Act as a liason between the data science team and the other developers.
 
+- Keep track of services and APIs that might be of use to data science
+team and advocate for any additions that might be helpful.
+
+- Act as a developer on projects that fall in the skillset of the
+traditional developers but the goals of the data science team.
+
+- Keeping up with trends in development of methods to work with big data,
+complex models, and scalable processing.
+
+- Provide architectural reviews for software developed within the data
+science team.
+
+- Perform research related to work being done within CIDA, OWI, and the
+Water mission area.
+
+- Put together a portfolio to present to the RGE/EDGE board to get an
+evaluation for position.
 
 Transition
 ==========
 
+Acknowledging that this is a bit of a change, it would be best to plan
+the transition to avoid adversely affecting ongoing projects.  The developer
+switching should start out at around 25% on the data science team, joining
+in on meetings while still working on projects already committed to.  Then
+as planning and funding allows the allocation can increase to an eventual
+100%.
+
+Additionally, the increased capacity on the data science team will allow
+for projects that fit with the goals of the team to be added and tackled
+as a joint effort between functional groups.  The flexibility this will
+offer should ensure a self-sufficient data science team into the future.
 
 Conclusion
 ==========
 
+The establishment of a data science team was a smart move for CIDA and the
+OWI.  Furthering its effectiveness through tighter integration with the
+rest of CIDA will benefit both the team and CIDA.  Working within a different
+work structure allows for multiple approaches to solving the science problems
+presented to the USGS.  Introducing multiple functions into the separate
+approaches allows for fully functional teams which can complete tasks
+independent of others, while preserving the channels of communication
+that make CIDA a unique team and place to work.
 
 References
 ==========
 
-.. [1] Center for Integrated Data Analytics
-   (http://cida.usgs.gov/)
+.. [1] Cross-functional team, wikipedia.
+	(http://en.wikipedia.org/wiki/Cross-functional_team)
 
-
+.. [2] USGS Research and Development Guidance.
+	(http://www.usgs.gov/humancapital/hr/rgeg.html)
 Copyright
 =========
 
