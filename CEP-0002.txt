@@ -16,9 +16,9 @@ Abstract
 In the interest of maintaining a sustainable structure within CIDA, the 
 divisions between groups based on function should be broken down.  Teams
 that are composed of members from different functional units will enhance
-communication and collaboration between those units.  There has been a
-history of walls between these units which prevent such beneficial commun-
-ication.
+communication and collaboration between groups.  There has been a
+history of walls between functional units which have prevented beneficial 
+communication.
 
 I propose adding a member of the developer team to the newly formed data
 science team for several reasons.  First, this position will act to prevent
@@ -80,8 +80,8 @@ As a member of the data science team, the developer role would include:
 - Keep track of services and APIs that might be of use to data science
 team and advocate for any additions that might be helpful.
 
-- Act as a developer on projects that fall in the skill-set of the
-traditional developers but the goals of the data science team.
+- Act as a developer on projects that require the skill-set of a
+traditional developer but fit within the mission of the data science team.
 
 - Keeping up with trends in development of methods to work with big data,
 complex models, and scalable processing.
