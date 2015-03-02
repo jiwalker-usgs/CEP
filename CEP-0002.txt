@@ -35,8 +35,8 @@ Rationale
 The goal of the teams at CIDA should not be to collect a group of people
 with the same background, but rather they should collect a group of people
 with a similar approach to solving the problems that are presented to CIDA.
-The existing data science team is utilizing some of CIDAs best-practes
-combinded with novel scientific research to establish a new approach to the
+The existing data science team is utilizing some of CIDA's best-practices
+combined with novel scientific research to establish a new approach to the
 challenges CIDA is attempting to counter.  With this approach, this team
 distinguishes itself from the rest of CIDA, but will best accomplish its
 goals with a cross-functional team.
@@ -75,12 +75,12 @@ Duties
 
 As a member of the data science team, the developer role would include:
 
-- Act as a liason between the data science team and the other developers.
+- Act as a liaison between the data science team and the other developers.
 
 - Keep track of services and APIs that might be of use to data science
 team and advocate for any additions that might be helpful.
 
-- Act as a developer on projects that fall in the skillset of the
+- Act as a developer on projects that fall in the skill-set of the
 traditional developers but the goals of the data science team.
 
 - Keeping up with trends in development of methods to work with big data,
@@ -125,7 +125,7 @@ that make CIDA a unique team and place to work.
 References
 ==========
 
-.. [1] Cross-functional team, wikipedia.
+.. [1] Cross-functional team, Wikipedia.
 	(http://en.wikipedia.org/wiki/Cross-functional_team)
 
 .. [2] USGS Research and Development Guidance.
