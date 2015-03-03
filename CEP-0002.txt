@@ -85,7 +85,7 @@ team and advocate for any additions that might be helpful.
 - Act as a developer on projects that require the skill-set of a
 traditional developer but fit within the mission of the data science team.
 
-- Keeping up with trends in development of methods to work with big data,
+- Keep up with trends in development of methods to work with big data,
 complex models, and scalable processing.
 
 - Provide architectural reviews for software developed within the data
@@ -94,8 +94,7 @@ science team.
 - Perform research related to work being done within CIDA, OWI, and the
 Water mission area.
 
-- Put together a portfolio to present to the RGE/EDGE board to get an
-evaluation for position.
+- Contribute to an RGE/EDGE portfolio and be {evaluated for a position}.
 
 Transition
 ==========
