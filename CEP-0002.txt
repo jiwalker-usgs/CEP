@@ -14,37 +14,39 @@ Abstract
 ========
 
 In the interest of maintaining a sustainable structure within CIDA, the 
-divisions between groups based on function should be broken down.  Teams
-that are composed of members from different functional units will enhance
-communication and collaboration between those units.  There has been a
-history of walls between these units which prevent such beneficial commun-
-ication.
+divisions between groups based on function should be broken down.  Mixing 
+skillsets and backgrounds within teams will enhance communication and coll-
+aboration between groups.  There has been a history of communication barriers 
+between skill groups in CIDA which have prevented beneficial overlap.
 
 I propose adding a member of the developer team to the newly formed data
 science team for several reasons.  First, this position will act to prevent
-a wall forming between this group and others which will negatively impact
+a wall forming between this group and others which could negatively impact
 CIDA overall.  Secondly, such a position will benefit the data science team
-as someone with a computer science background can lend that expertise to
-the overall goal of the team.  Lastly, such a position may blaze a path for
-career advancement within the computer scientist position that will help
-with recruitment.
+as a computer scientist can lend direct expertise to the goals of the team.  
+Lastly, such a position could expose an alternative path for career advance-
+ment within the computer scientist position that will help with recruitment 
+and retention.
 
 Rationale
 =========
 
-The goal of the teams at CIDA should not be to collect a group of people
-with the same background, but rather they should collect a group of people
-with a similar approach to solving the problems that are presented to CIDA.
-The existing data science team is utilizing some of CIDA's best-practices
-combined with novel scientific research to establish a new approach to the
-challenges CIDA is attempting to counter.  With this approach, this team
-distinguishes itself from the rest of CIDA, but will best accomplish its
-goals with a cross-functional team.
+Assembling effective teams to tackle complex challenges requires mixing div-
+erse backgrounds and a blend of specialists and generalists [_1]. The goal 
+of team formation within CIDA should not be to collect a group of people
+with the same background, but rather to collect a group of people with mutual 
+respect and complementary skills, that are willing to converge on a shared 
+approach to solving the problems that are presented to CIDA.  The existing 
+data science team is utilizing some of CIDA's best-practices combined with 
+novel scientific research to establish a new approach to the challenges CIDA 
+is attempting to counter.  With this approach, the team has an opportunity 
+to distinguish itself within USGS, but will best accomplish its goals with 
+a cross-functional team.
 
 One of the directives of the data science team is to publish research that
-shows off the work of CIDA, the OWI, and the USGS.  Much of this work will
-be done by feeding off APIs produced by developers within all three of the
-aforementioned groups.  Having a developer who has been a part of these
+highlights the work of CIDA, the OWI, and the USGS.  Much of this work will
+be done by feeding off APIs produced by developers within {all three of the
+aforementioned groups}.  Having a developer who has been a part of these
 projects and can help to understand and enhance the underlying frameworks
 will benefit the team as a whole.  Adding to architectural decisions and
 integration with other CIDA projects is another benefit of having a developer
@@ -54,15 +56,15 @@ The goal of cross-functional teams is prevalent within CIDA, but defining
 that goal is somewhat difficult.  One definition that seems to be making
 its rounds is that everyone on a team is able to take on any task that is
 presented to the team.  While this is a goal that has its merits, a
-definition that fits better is a group of people with different functional
-expertise working toward a common goal [_1].  By being a cross-functional
-team, the data science team will integrate better with CIDA and be more
-able to accomplish its goals.
+more widely accepted definition of a cross-functional team is a "group of 
+people with different functional expertise working toward a common goal" 
+[_2].  By being a cross-functional team, the data science team will 
+integrate better with CIDA and be more able to accomplish its goals.
 
 A growing issue within the development group is recruitment.  Qualified
 persons are difficult to find, and harder to hire.  One point that might
 aid in recruitment would be for different career paths that one could
-take.  The RGE and EDGE [_2] programs allow for advancement based on
+take.  The RGE and EDGE [_3] programs allow for advancement based on
 accomplishments in research and development.  Currently this is an untested
 approach for computer scientists, especially for CIDA.  Having this option
 available would help especially if looking for candidates with a more
@@ -80,10 +82,10 @@ As a member of the data science team, the developer role would include:
 - Keep track of services and APIs that might be of use to data science
 team and advocate for any additions that might be helpful.
 
-- Act as a developer on projects that fall in the skill-set of the
-traditional developers but the goals of the data science team.
+- Act as a developer on projects that require the skill-set of a
+traditional developer but fit within the mission of the data science team.
 
-- Keeping up with trends in development of methods to work with big data,
+- Keep up with trends in development of methods to work with big data,
 complex models, and scalable processing.
 
 - Provide architectural reviews for software developed within the data
@@ -92,8 +94,7 @@ science team.
 - Perform research related to work being done within CIDA, OWI, and the
 Water mission area.
 
-- Put together a portfolio to present to the RGE/EDGE board to get an
-evaluation for position.
+- Contribute to an RGE/EDGE portfolio and be {evaluated for a position}.
 
 Transition
 ==========
@@ -125,10 +126,15 @@ that make CIDA a unique team and place to work.
 References
 ==========
 
-.. [1] Cross-functional team, Wikipedia.
+.. [1] Cheruvelil, K. S., P. A. Soranno, K. C. Weathers, P. C. Hanson, S. J. 
+Goring, C. T. Filstrup, and E.K. Read (2014), Creating and maintaining 
+high-performing collaborative research teams: the importance of diversity 
+and interpersonal skills, Front. Ecol. Environ., 12(1), 31–38, 802.
+
+.. [2] Cross-functional team, Wikipedia.
 	(http://en.wikipedia.org/wiki/Cross-functional_team)
 
-.. [2] USGS Research and Development Guidance.
+.. [3] USGS Research and Development Guidance.
 	(http://www.usgs.gov/humancapital/hr/rgeg.html)
 Copyright
 =========
