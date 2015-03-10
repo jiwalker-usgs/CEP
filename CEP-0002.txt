@@ -13,20 +13,11 @@ Post-History:
 Abstract
 ========
 
-In the interest of maintaining a sustainable structure within CIDA, the 
-divisions between groups based on function should be broken down.  Mixing 
-skillsets and backgrounds within teams will enhance communication and coll-
-aboration between groups.  There has been a history of communication barriers 
-between skill groups in CIDA which have prevented beneficial overlap.
+Diversity and communication are key characteristics of effective interdisciplinary teams [_1].  CIDA teams are generally aligned according to disciplinary and skill set backgrounds (developers, system administrators, and project leads), despite operating in an interdisciplinary field, in which software engineers, scientists, project managers, and system administrators work together to produce technology solutions.  Historically, communication barriers between CIDA teams have prevented beneficial overlap of information and ideas.  In the interest of maintaining and enhancing a sustainable and effective CIDA, a formal mechanism to increase communication channels between CIDA teams may be necessary. 
 
 I propose adding a member of the developer team to the newly formed data
-science team for several reasons.  First, this position will act to prevent
-a wall forming between this group and others which could negatively impact
-CIDA overall.  Secondly, such a position will benefit the data science team
-as a computer scientist can lend direct expertise to the goals of the team.  
-Lastly, such a position could expose an alternative path for career advance-
-ment within the computer scientist position that will help with recruitment 
-and retention.
+science team in order to increase communication between these groups.  This position will act to prevent this group developing as a ‘silo’, which could negatively impact CIDA overall.  Such a position will benefit the data science team by directing computer science expertise to the goals of the team.  
+Finally, alternative paths for computer scientist career advancement may be exposed by this change; demonstrating these alternative paths will help for recruitment and retention of computer scientists in the future.
 
 Rationale
 =========
@@ -45,14 +36,9 @@ a cross-functional team.
 
 One of the directives of the data science team is to publish research that
 highlights the work of CIDA, the OWI, and the USGS.  Much of this work will
-be done by feeding off APIs produced by developers within {all three of the
-aforementioned groups}.  Having a developer who has been a part of these
-projects and can help to understand and enhance the underlying frameworks
-will benefit the team as a whole.  Adding to architectural decisions and
-integration with other CIDA projects is another benefit of having a developer
-on the team will have.
+be done by utilizing APIs produced within and outside of the USGS.  A developer with firsthand experience with APIs can contribute to data science research by most effectively leveraging these technologies, troubleshooting issues, and by bringing to the table knowledge of APIs that might otherwise be unknown to the data science group. The data science team, and CIDA as a whole, will also benefit by the input of a developer on architectural decisions made by the data science team, and by integration with existing CIDA work. 
 
-The goal of cross-functional teams is prevalent within CIDA, but defining
+The goal of ‘cross-functional’ teams is prevalent within CIDA, but defining
 that goal is somewhat difficult.  One definition that seems to be making
 its rounds is that everyone on a team is able to take on any task that is
 presented to the team.  While this is a goal that has its merits, a
@@ -68,8 +54,8 @@ take.  The RGE and EDGE [_3] programs allow for advancement based on
 accomplishments in research and development.  Currently this is an untested
 approach for computer scientists, especially for CIDA.  Having this option
 available would help especially if looking for candidates with a more
-academic background (e.g. Computer Science or Electrical Engineering Graduate
-Students).  Currently this path would most likely be set through efforts
+academic background (e.g. Computer Science or Electrical Engineering graduate
+students).  Currently this path would most likely be set through efforts
 taken on by the data science team.
 
 Duties
@@ -94,7 +80,7 @@ science team.
 - Perform research related to work being done within CIDA, OWI, and the
 Water mission area.
 
-- Contribute to an RGE/EDGE portfolio and be {evaluated for a position}.
+- Contribute to an RGE/EDGE portfolio and be evaluated for a position.
 
 Transition
 ==========
