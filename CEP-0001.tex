@@ -1,201 +1,113 @@
-CEP: XXX
-Title: A CIDA Docker Proof of Concept
-Version: $Revision$
-Last-Modified: $Date$
-Author: Jordan Walker <jiwalker@usgs.gov>
-Status: Active
-Type: Process
-Content-Type: text/x-rst
-Created: 06-Jan-2015
-Post-History: 
+\documentclass[twocolumn]{article}
 
+\usepackage{hyperref}
 
-Abstract
-========
+\title{A CIDA Docker Proof of Concept}
+\author{Jordan Walker}
+\date{2015-01-06}
 
-There are many options out there in the worlds of containerization and
-configuration management of services.  As a group, CIDA [1]_ has several
-types of projects that can benefit from the different configuration
-management solutions that are out there.  In particular applications that
-require particular package dependencies in order to operate correctly can
-make use of a configuration management solution to ensure that those
-dependencies are available to the application.
+\begin{document}
 
-Docker [2]_ is one such option available, and has been growing in popularity
-of late.  I propose a proof of concept Docker setup on CIDA infrastructure
-in order to determine whether it should be considered for general
-applicability across many applications as a containerization and
-configuration management mechanism.
+\maketitle
 
-The application chosen for this stage of our use of docker will be a simple
-service that is non-stateful and particularly fits the Docker use-case well.
-The result of this proof of concept will be a better understanding of the
-security implications of using Docker in our infrastructure and some
-guidance on what applications and services fit the Docker model of
-containerization and configuration management.
+\section{Abstract}
 
-Rationale
-=========
+There are many options out there in the worlds of containerization and configuration management of services.
+As a group, CIDA \cite{cida} has several types of projects that can benefit from the different configuration management solutions that are out there.
+In particular applications that require particular package dependencies in order to operate correctly can make use of a configuration management solution to ensure that those dependencies are available to the application.
 
-While other configuration management approaches are being used and pursued
-within our group [3]_, [4]_, [5]_ Docker provides a unique approach to the
-problem that benefits certain applications in ways that we do not have
-answers to in any current system.  A proof of concept will go a long way
-to show the benefits and challenges of Docker or similar systems.
+\par
+Docker \cite{dockerintro} is one such option available, and has been growing in popularity of late.
+I propose a proof of concept Docker setup on CIDA infrastructure in order to determine whether it should be considered for general applicability across many applications as a containerization and configuration management mechanism.
 
+\par
+The application chosen for this stage of our use of docker will be a simple service that is non-stateful and particularly fits the Docker use-case well.
+The result of this proof of concept will be a better understanding of the security implications of using Docker in our infrastructure and some guidance on what applications and services fit the Docker model of containerization and configuration management.
+
+\section{Rationale}
+
+While other configuration management approaches are being used and pursued within our group \cite{cfengine}, \cite{ansible}, \cite{chef} Docker provides a unique approach to the problem that benefits certain applications in ways that we do not have answers to in any current system.
+A proof of concept will go a long way to show the benefits and challenges of Docker or similar systems.
+
+\par
 The following features of Docker are particularly of interest at this point:
+\begin{itemize}
+  \item Running multiple sandbox-ed containers within a single Virtual Machine
+  \item Having an artifact that represents all dependencies of a service
+  \item Inheritance of configuration so that many containers can be based on a single base setup
+  \item Ability to have developer determined commands run for setup that would otherwise be performed manually by admin staff
+\end{itemize}
 
-- Running multiple sandbox-ed containers within a single Virtual Machine
+\par
+Some of these features are available in other approaches that have been suggested, but Docker has simple mechanisms for all these points.
+If there is was a best-practice for this type of task at CIDA it would not be needed to come up with another solution, but to date nothing is clear in its use for this particular need.
 
-- Having an artifact that represents all dependencies of a service
+\section{Service Containerization}
 
-- Inheritance of configuration so that many containers can be based on a
-  single base setup
+The goal in making containers for services is to have everything the service needs to run be pre-baked into a container.
+Then the container is deployed and able to run the service with minimal adjustments.
+Such a container can be achieved through virtualization, but recent changes have made Linux Containers \cite{lxc} an appealing alternative.
+Docker fits into the latter group and offers lower overhead when compared to virtual machines.
 
-- Ability to have developer determined commands run for setup that would
-  otherwise be performed manually by admin staff
+\par
+When using containers to avoid dependencies conflicts in system dependencies, system level containers are required.
+Alternate approaches to sandbox-ed environments are worth discussing for the benefit they bring, but none solve the system dependency problem.
+The Java classloader allows for different services to use different versions of libraries, python virtualenv \cite{virtualenv} installs isolated python environments to achieve the same end, and packrat \cite{packrat} is an R package that offers similar functionality.
 
-Some of these features are available in other approaches that have been
-suggested, but Docker has simple mechanisms for all these points.  If 
-there is was a best-practice for this type of task at CIDA it would not
-be needed to come up with another solution, but to date nothing is clear
-in its use for this particular need.
+\section{Configuration Management}
 
-Service Containerization
-========================
+Configuration of a service involves configuration files as well as installation of all the dependencies.
+This can be accomplished through a combination of virtualization and automation scripts or by putting all the configuration in the artifact itself.
+The latter approach is that taken by Docker and fits well into a continuous integration setup where the result of a build is an artifact that can work its way to production.
 
-The goal in making containers for services is to have everything the service
-needs to run be pre-baked into a container.  Then the container is deployed
-and able to run the service with minimal adjustments.  Such a container can
-be achieved through virtualization, but recent changes have made Linux
-Containers [6]_ an appealing alternative.  Docker fits into the latter group
-and offers lower overhead when compared to virtual machines.
+\par
+A point should be made that Docker isn't configuration management in the sense of other configuration management tools, but rather by specifying a build file for what should be included in the container.
+For some projects this will not be sufficient, but for our proof of concept use-case with a stateless service this will do just fine.
 
-When using containers to avoid dependencies conflicts in system dependencies,
-system level containers are required.  Alternate approaches to sandbox-ed
-environments are worth discussing for the benefit they bring, but none solve
-the system dependency problem.  The Java classloader allows for different
-services to use different versions of libraries, python virtualenv [7]_
-installs isolated python environments to achieve the same end, and packrat [8]_
-is an R package that offers similar functionality.
+\par
+Lastly, when applying configuration to servers, often times root access is necessary.
+The distinction of what is run with root privileges should clearly be made and reviewed in conjunction with the security team to avoid possible breaches.
+Any solution we come up with will likely have this feature, and Docker in particular provides a good mechanism for managing this.
 
-Configuration Management
-========================
+\section{Requirements}
 
-Configuration of a service involves configuration files as well as
-installation of all the dependencies.  This can be accomplished through a
-combination of virtualization and automation scripts or by putting all the
-configuration in the artifact itself.  The latter approach is that taken by
-Docker and fits well into a continuous integration setup where the result of
-a build is an artifact that can work its way to production.
+Having made the point that this is a worthwhile exercise, here are the requirements from the author for such a solution.
 
-A point should be made that Docker isn't configuration management in the sense
-of other configuration management tools, but rather by specifying a build file
-for what should be included in the container.  For some projects this will not
-be sufficient, but for our proof of concept use-case with a stateless service
-this will do just fine.
+\begin{itemize}
+  \item A single machine with Docker host installed
+  \item A registry (remote or local to host) that images can be pushed to or pulled from
+  \item Ability for devs (or eventually Jenkins) to run docker commands
+  \begin{itemize}
+    \item Some commands may be restricted for security reasons, in particular
+    \item docker run should not allow volumes to be created as there is no easy mechanism for preventing root volumes from being mounted
+    \item docker run must allow at least flags -d -P for devs to get use from this
+  \end{itemize}
+  \item A process for approving Dockerfiles for building
+  \item A means for approved images to be uploaded to registry
+  \item Ports in the range 49153 and 65535 should be opened for other services to be able to communicate with the docker container services
+  \item The following guidelines will be followed by developers of Dockerfiles
+  \begin{itemize}
+    \item The de-escalation from root shall occur as soon as possible
+    \item A non-root user shall run all services inside the container
+	\item Best practices \cite{dockerbestpractices} shall be followed
+    \begin{itemize}
+      \item Exception: recommendations to use official repositories should be ignored because we are going to have our own registry of trusted images
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
 
-Lastly, when applying configuration to servers, often times root access is
-necessary.  The distinction of what is run with root privileges should clearly
-be made and reviewed in conjunction with the security team to avoid possible
-breaches.  Any solution we come up with will likely have this feature, and
-Docker in particular provides a good mechanism for managing this.
+\section{Conclusion}
 
-Requirements
-============
+A proof of concept Docker setup will give valuable insight into how this tool might fit into CIDA's infrastructure.
+Benefits such as lower overhead and improved consistency of services promise to improve our ability to deliver quality software.
+Lessons learned from this initial exploration will inform us as we look to future work in developing microservices.
 
-Having made the point that this is a worthwhile exercise, here are the
-requirements from the author for such a solution.
+\par
+Generally it is wise to avoid the ``next big thing'' in technology as it often leads to fragmented stacks and products that have not withstood the test of time.
+Docker is being touted as the ``next big thing'', so we should tread softly, but the promise it brings for many areas of our development make it too hard to avoid it much longer.
 
-- A single machine with Docker host installed
+\onecolumn
+\bibliographystyle{plainurl}
+\bibliography{CEP}
 
-- A registry (remote or local to host) that images can be pushed to or pulled
-  from
-
-- Ability for devs (or eventually Jenkins) to run ``docker`` commands
-
-  * Some commands may be restricted for security reasons, in particular
-
-  * docker run should not allow volumes to be created as there is no easy
-    mechanism for preventing root volumes from being mounted
-
-  * docker run must allow at least flags -d -P for devs to get use from this
-
-- A process for approving Dockerfiles for building
-
-- A means for approved images to be uploaded to registry
-
-- Ports in the range 49153 and 65535 should be opened for other services to
-  be able to communicate with the docker container services
-
-- The following guidelines will be followed by developers of Dockerfiles
-
-  * The de-escalation from root shall occur as soon as possible
-
-  * A non-root user shall run all services inside the container
-
-  * Best practices [9]_ shall be followed
-
-    + Exception: recommendations to use official repositories should be
-      ignored because we are going to have our own registry of trusted images
-
-Conclusion
-==========
-
-A proof of concept Docker setup will give valuable insight into how this tool
-might fit into CIDA's infrastructure.  Benefits such as lower overhead and
-improved consistency of services promise to improve our ability to deliver
-quality software.  Lessons learned from this initial exploration will inform
-us as we look to future work in developing microservices.
-
-Generally it is wise to avoid the "next big thing" in technology as it often
-leads to fragmented stacks and products that have not withstood the test of
-time.  Docker is being touted as the "next big thing", so we should tread
-softly, but the promise it brings for many areas of our development make it
-too hard to avoid it much longer.
-
-References
-==========
-
-.. [1] Center for Integrated Data Analytics
-   (http://cida.usgs.gov/)
-
-.. [2] Docker, Docker Introduction, Docker, Inc.
-   (http://www.docker.com/whatisdocker/)
-
-.. [3] CFEngine, CFEngine AS
-   (http://cfengine.com/)
-
-.. [4] Ansible, Simple IT Automation, Ansible, Inc.
-   (http://www.ansible.com/home)
-
-.. [5] Chef, IT automation for speed and awesomeness, Chef Software, Inc,
-   (https://www.chef.io/chef/)
-
-.. [6] Linux Containers
-   (https://linuxcontainers.org/)
-
-.. [7] Virtualenv
-   (https://virtualenv.pypa.io/en/latest/)
-
-.. [8] packrat
-   (https://github.com/rstudio/packrat)
-
-.. [9] Dockerfile Best Practices, Docker, Inc.
-   (https://docs.docker.com/articles/dockerfile_best-practices/)
-
-Copyright
-=========
-
-This document has been placed in the public domain.
-
-
-
-..
-   Local Variables:
-   mode: indented-text
-   indent-tabs-mode: nil
-   sentence-end-double-space: t
-   fill-column: 70
-   coding: utf-8
-   End:
+\end{document}
